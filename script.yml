@@ -1,0 +1,13 @@
+---
+- hosts: testZABBIX
+  gather_facts: no
+  tasks:
+..
+  - name: copy script
+    copy: src=/usr/local/sbin/script.sh dest=/usr/local/sbin
+..
+  - name: copy second script
+    copy: src=/usr/local/sbin/for_zabbix.sh dest=/usr/local/sbin
+..
+  - name: start script
+    shell: bash /usr/local/sbin/script.sh
